@@ -8,26 +8,18 @@ formDados.addEventListener('submit', (evt)=>{
 
        const objFormDados = new FormData(formDados)
 
-       let n1= objFormDados.get('num1')
-       let n2 = objFormDados.get('num2')
-       let n3 = objFormDados.get('num3')
+let n1 = parseFloat(objFormDados.get('num1'))
 
-let media = parseFloat ((n1 + n2 + n3))/ parseFloat
+let n2 = parseFloat(objFormDados.get('num2'))
 
-divResultado
+let n3 = parseFloat(objFormDados.get('num3'))
 
+let media = (n1 + n2 + n3) / 3
 
-divResultado.innerHTML = situacaoIdade
+divResultado.innerHTML = `A MÉDIA DOS NÚMEROS DIGITADOS É: ${ media.toFixed(2).replace('.', ',')
 
-     let situacaoIdade = ''
+}`
 
-     if (idade >= 18 ){
-         situacaoIdade = `${nome}, vc é maior de idade`
-     }else{ 
-        situacaoIdade = `${nome}, vc é menor de idade`
-     }
-
-     divResultado.innerHTML = situacaoIdade
-
+formDados.reset()
 })
     
