@@ -111,6 +111,7 @@ if(idade >= 18){
   70 ACIMA - 3 ANOS 
  */
 
+ //ANINHAMENTI DE IF
   if (idade < 18){
     console.log(`COM A IDADE DE ${idade}, NÃO É PERMITIDO POSSUIR CNH`)
 }else if (idade < 50){
