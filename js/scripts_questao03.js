@@ -17,8 +17,10 @@ let preco = parseFloat(objFormDados.get('preco'))
 let quantidadeCombustivel = distancia / consumo
 let valorTotal = quantidadeCombustivel * preco
 
-divResultado.innerHTML = `QUANTIDADE DE COMBUSTÍVEL NECESSÁRIO: ${ quantidadeCombustivel.toFixed(2).replace('.', ',') } L <br>
-VALOR TOTAL A PAGAR: R$ ${ valorTotal.toFixed(2).replace('.', ',') }`
+divResultado.innerHTML = `<div>
+    QUANTIDADE DE COMBUSTÍVEL NECESSÁRIA: ${ quantidadeCombustivel.toFixed(2).replace('.', ',') } L <br>
+    VALOR TOTAL A PAGAR: R$ ${ valorTotal.toFixed(2).replace('.', ',') }
+</div>`
 
 formDados.reset()
 })
