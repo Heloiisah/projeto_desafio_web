@@ -13,9 +13,10 @@ let altura = parseFloat(objFormDados.get('altura'))
 
 let area = largura * altura
 
-divResultado.innerHTML = `A área a ser pintada é de ${ area.toFixed(2).replace('.', ',')}m², Total de litros para pintar essa área é de ${parseFloat(area/2).toFixed(2).replace
-
-}`
+divResultado.innerHTML = `<div>
+    A área a ser pintada é de ${ area.toFixed(2).replace('.', ',') } m².<br>
+    Total de litros para pintar essa área é de ${ (area/2).toFixed(2).replace('.', ',') } L.
+</div>`
 
 formDados.reset()
 })
